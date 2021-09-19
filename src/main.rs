@@ -1,7 +1,7 @@
 use std::io;
 
 fn main() {
-    let mut x = 185;
+    let x = 185;
 
     // Named arguments
     println!("{num}", num = x);
@@ -11,7 +11,7 @@ fn main() {
 
     let spaces = spaces.len();
     println!("Spaces: {}", spaces);
-    
+
     // Tuple types
     let tuple: (i32, f64, bool) = (500, 23.34, true);
     println!("Tuple: {:?}", tuple);
