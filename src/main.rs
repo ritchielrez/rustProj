@@ -1,4 +1,14 @@
-use std::io;
+fn test() {
+    let x = 5;
+
+    let y = {
+        let x = 12;
+        x + 1
+    };
+
+    println!("X: {:?}", x);
+    println!("Y: {:?}", y);
+}
 
 fn main() {
     let x = 185;
@@ -12,13 +22,16 @@ fn main() {
     let spaces = spaces.len();
     println!("Spaces: {}", spaces);
 
-    // Tuple types
-    let tuple: (i32, f64, bool) = (500, 23.34, true);
+    // Tuple types () brackets
+    let tuple: (i32, f32, bool, &str) = (23, 23.34, true, "Test");
     println!("Tuple: {:?}", tuple);
-    println!("Tuple: {:?}", tuple.2);
+    println!("Tuple 1st Index: {:?}", tuple.0);
 
     // Array types
-    let array: [i32; 10] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-    println!("Array: {:?}", array);
-    println!("Array 1: {}", array[0]);
+    let arr: [isize; 5] = [0,1, 2, 3, 4];
+    println!("Array: {:?}", arr);
+
+    // Functions
+    test();
 }
+
